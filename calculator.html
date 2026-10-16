@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTC to In-Hand Salary Calculator India 2026 (FY 2026-27 New Regime)</title>
+<meta name="description" content="Free CTC to in-hand salary calculator for FY 2026-27: new regime slabs, ₹75,000 standard deduction, ₹12L rebate, PF, gratuity, professional tax and cess.">
+<!-- SEO: site URL is https://akksj.github.io (canonical, og:url, og:image, sitemap.xml, robots.txt) -->
+<link rel="canonical" href="https://akksj.github.io/calculator.html">
+<meta property="og:site_name" content="SwitchKit India">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CTC to In-Hand Salary Calculator India 2026 (FY 2026-27 New Regime)">
+<meta property="og:description" content="Free CTC to in-hand salary calculator for FY 2026-27: new regime slabs, ₹75,000 standard deduction, ₹12L rebate, PF, gratuity, professional tax and cess.">
+<meta property="og:url" content="https://akksj.github.io/calculator.html">
+<meta property="og:image" content="https://akksj.github.io/assets/img/favicon.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CTC to In-Hand Salary Calculator India 2026 (FY 2026-27 New Regime)">
+<meta name="twitter:description" content="Free CTC to in-hand salary calculator for FY 2026-27: new regime slabs, ₹75,000 standard deduction, ₹12L rebate, PF, gratuity, professional tax and cess.">
+<meta name="twitter:image" content="https://akksj.github.io/assets/img/favicon.svg">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CTC to In-Hand Salary Calculator India (FY 2026-27)", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "url": "https://akksj.github.io/calculator.html", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="logo" href="index.html"><span class="logo-mark">SK</span> SwitchKit India</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="calculator.html">Free salary calculator</a></li>
+      <li><a href="index.html#inside">What's inside</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="blog/index.html">Guides</a></li>
+      <li><a class="btn btn-primary btn-sm" href="index.html#waitlist">Join the waitlist</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+
+<section class="hero" style="padding-bottom:28px">
+  <div class="container">
+    <span class="eyebrow">Free tool · FY 2026-27 · New tax regime</span>
+    <h1>CTC to in-hand salary calculator</h1>
+    <p class="lead">Enter your CTC and see what actually lands in your bank account each month, after employer PF, gratuity, income tax, employee PF and professional tax.</p>
+  </div>
+</section>
+<section style="padding-top:20px">
+  <div class="container calc-grid">
+    <form id="calc-form" class="card" novalidate>
+      <div class="field">
+        <label for="ctc">Annual CTC (₹)</label>
+        <input id="ctc" type="number" inputmode="numeric" min="0" step="10000" value="1200000">
+        <span class="hint" id="ctc-words"></span>
+      </div>
+      <div class="field">
+        <label for="basicPct">Basic salary (% of CTC)</label>
+        <input id="basicPct" type="number" inputmode="decimal" min="0" max="100" step="1" value="40">
+        <span class="hint">Usually 35–50%. Check your offer letter's salary breakup.</span>
+      </div>
+      <div class="field">
+        <label for="variable">Annual variable pay / bonus inside CTC (₹)</label>
+        <input id="variable" type="number" inputmode="numeric" min="0" step="10000" value="0">
+        <span class="hint">Performance bonus that is part of CTC. Enter 0 if none.</span>
+      </div>
+      <div class="field">
+        <label for="pt">Professional tax per year (₹)</label>
+        <input id="pt" type="number" inputmode="numeric" min="0" step="100" value="2400">
+        <span class="hint">₹2,400 is a typical figure; it varies by state (some states charge ₹2,500, some none).</span>
+      </div>
+      <label class="check"><input id="employerPf" type="checkbox" checked> <span>Employer PF (12% of basic) is included in my CTC</span></label>
+      <label class="check"><input id="gratuity" type="checkbox" checked> <span>Gratuity (4.81% of basic) is included in my CTC</span></label>
+      <label class="check"><input id="pfCapped" type="checkbox"> <span>PF is calculated on capped basic of ₹15,000/month (not full basic)</span></label>
+      <p class="error" id="calc-error" role="alert"></p>
+      <noscript><p class="note">This calculator needs JavaScript.</p></noscript>
+    </form>
+
+    <div>
+      <div class="result-hero" aria-live="polite">
+        <div class="stat"><div class="label">Monthly in-hand (fixed)</div><div class="value" id="out-month">—</div></div>
+        <div class="stat alt2"><div class="label">Annual in-hand</div><div class="value" id="out-year">—</div><div class="small muted" id="out-pct"></div></div>
+      </div>
+      <p class="small muted" id="out-variable"></p>
+      <div class="card table-wrap">
+        <h2 style="font-size:1.2rem">Breakdown</h2>
+        <table><tbody id="breakdown"></tbody></table>
+      </div>
+      <div class="kit-box">
+        <h3>Comparing two offers?</h3>
+        <p>The SwitchKit India spreadsheet puts your current pay and two offers side by side, with variable pay, joining bonus and notice-buyout cost shown separately. It comes with 8 negotiation scripts for the conversation that follows.</p>
+        <a class="btn btn-primary" href="index.html#inside">See what's in the kit</a>
+        <a class="btn btn-ghost" href="index.html#waitlist" style="margin-left:6px">Get ₹349 early-bird</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container narrow">
+    <h2>How this calculator works</h2>
+    <ol>
+      <li><strong>Gross salary</strong> = CTC − employer PF − gratuity provision (when those are part of your CTC). This is the salary actually paid to you.</li>
+      <li><strong>Taxable income</strong> = gross salary − ₹75,000 standard deduction.</li>
+      <li><strong>Slab tax</strong> on taxable income, FY 2026-27 new regime:
+        <div class="table-wrap"><table>
+          <thead><tr><th>Taxable income</th><th class="num">Rate</th></tr></thead>
+          <tbody>
+            <tr><td>Up to ₹4,00,000</td><td class="num">Nil</td></tr>
+            <tr><td>₹4,00,001 – ₹8,00,000</td><td class="num">5%</td></tr>
+            <tr><td>₹8,00,001 – ₹12,00,000</td><td class="num">10%</td></tr>
+            <tr><td>₹12,00,001 – ₹16,00,000</td><td class="num">15%</td></tr>
+            <tr><td>₹16,00,001 – ₹20,00,000</td><td class="num">20%</td></tr>
+            <tr><td>₹20,00,001 – ₹24,00,000</td><td class="num">25%</td></tr>
+            <tr><td>Above ₹24,00,000</td><td class="num">30%</td></tr>
+          </tbody></table></div>
+      </li>
+      <li><strong>Rebate</strong>: if taxable income is ₹12,00,000 or less, the rebate (section 87A of the old Act, section 156 of the Income-tax Act, 2025) brings tax to zero. Just above ₹12 lakh, <strong>marginal relief</strong> caps your tax at the amount by which income exceeds ₹12 lakh, so earning ₹1 more never costs you more than ₹1 in tax.</li>
+      <li><strong>Surcharge</strong> applies only above ₹50 lakh taxable income (10%, 15% above ₹1 crore, 25% above ₹2 crore), with marginal relief.</li>
+      <li><strong>Cess</strong>: 4% health and education cess on tax plus surcharge.</li>
+      <li><strong>In-hand</strong> = gross salary − employee PF (12% of basic) − professional tax − income tax.</li>
+    </ol>
+    <p>The "monthly in-hand (fixed)" figure leaves out variable pay, since that usually arrives once or twice a year and may not be paid in full. The variable payout is shown separately, after tax at your marginal rate.</p>
+    <p>Want the reasoning with worked examples? Read <a href="blog/ctc-to-in-hand-salary-india-2026.html">how to calculate in-hand salary from CTC</a>.</p>
+    <div class="note" style="margin-top:20px">
+      <strong>This is an estimate, not tax advice.</strong> It assumes a resident individual on the new tax regime with only salary income, no HRA or other exemptions, and employer PF within the tax-free limits. It doesn't cover the old regime, ESOP/RSU taxation, employer NPS, reimbursements, meal cards, or mid-year joining. Your employer's TDS and payslip may differ. For anything unusual, check with a chartered accountant. Your inputs never leave your browser.
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SwitchKit India</strong><br>
+      A job-switch kit for Indian developers with 2–6 years' experience.<br>
+      <span class="small">Calculators and guides are estimates for planning, not tax, legal or financial advice.</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="calculator.html">Salary calculator</a></li>
+      <li><a href="blog/index.html">Guides</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="refund.html">Refund policy</a></li>
+      <!-- [CONTACT_EMAIL]: Contact link hidden until a real address is set: <li><a href="mailto:EMAIL">Contact</a></li> -->
+    </ul>
+  </div>
+  <div class="container small" style="margin-top:16px">© <span id="year">2026</span> SwitchKit India</div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/tax.js"></script>
+<script src="assets/js/calculator.js"></script>
+</body>
+</html>

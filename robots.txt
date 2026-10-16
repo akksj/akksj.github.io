@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Site URL: https://akksj.github.io
+Sitemap: https://akksj.github.io/sitemap.xml
