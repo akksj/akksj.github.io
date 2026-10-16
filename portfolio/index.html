@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio of Sarthak Giri, a full stack developer from India building MERN and PHP/MySQL apps for clinics, kirana shops and colleges, and the creator of SwitchKit India.">
   <meta name="author" content="Sarthak Giri">
   <meta name="keywords" content="Sarthak Giri, akksj, full stack developer, MERN, React, Node.js, Express, MongoDB, PHP, MySQL, India, portfolio">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#05060f">
   <link rel="canonical" href="https://akksj.github.io/portfolio/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
@@ -29,218 +29,370 @@
   {"@context":"https://schema.org","@type":"Person","name":"Sarthak Giri","jobTitle":"Full Stack Developer","url":"https://akksj.github.io/portfolio/","sameAs":["https://github.com/akksj","https://www.linkedin.com/in/sarthak-giri-117490296"],"knowsAbout":["JavaScript","React","Node.js","Express","MongoDB","PHP","MySQL","HTML","CSS"],"address":{"@type":"PostalAddress","addressCountry":"IN"}}
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Loading intro (CSS-timed, gone in under 1.5 s even without JS) -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">SG</span>
+      <span class="loader__bar"><i></i></span>
+      <span class="loader__txt">Sarthak Giri · Portfolio</span>
+    </div>
+  </div>
+
+  <!-- Cinematic layers -->
+  <canvas class="bg-aurora" id="aurora" aria-hidden="true"></canvas>
+  <canvas class="bg-dust" id="dust" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
   <header class="nav" id="top">
-    <div class="container nav__inner">
-      <a href="#top" class="brand" aria-label="Sarthak Giri, home"><span class="brand__mark">SG</span> Sarthak Giri</a>
+    <div class="nav__inner">
+      <a href="#intro" class="brand" aria-label="Sarthak Giri, home"><span class="brand__mark">SG</span><span class="brand__name">Sarthak Giri</span></a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
       <nav id="nav-menu" class="nav__menu" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#problem">Problem</a>
         <a href="#projects">Projects</a>
-        <a href="#activity">Activity</a>
-        <a href="#contact" class="btn btn--small">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact" class="nav__cta">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- Chapter rail -->
+  <nav class="rail" aria-label="Chapters">
+    <a href="#intro" data-ch="intro"><b>00</b><span>Intro</span></a>
+    <a href="#problem" data-ch="problem"><b>01</b><span>The problem</span></a>
+    <a href="#projects" data-ch="projects"><b>02</b><span>Projects</span></a>
+    <a href="#skills" data-ch="skills"><b>03</b><span>Skills</span></a>
+    <a href="#journey" data-ch="journey"><b>04</b><span>Journey</span></a>
+    <a href="#contact" data-ch="contact"><b>05</b><span>Contact</span></a>
+  </nav>
+
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="about">
-      <div class="container hero__grid">
-        <div class="hero__text reveal">
-          <p class="eyebrow">Hi, I'm</p>
-          <h1>Sarthak Giri</h1>
-          <p class="hero__role">Full Stack Developer</p>
-          <p class="hero__intro">
-            I build web apps for places that still run on paper: a neighbourhood clinic's walk-in queue,
-            a kirana shop's udhaar (credit) book, a college timetable. My main stack is MERN
-            (MongoDB, Express, React, Node), and I started out with PHP and MySQL. I also run
-            <a href="../">SwitchKit India</a>, a live job-switch kit with a free CTC calculator.
-          </p>
-          <p class="hero__note">Based in India · Open to internships and junior full-stack roles.</p>
-          <div class="hero__cta">
-            <a href="#projects" class="btn">View projects</a>
-            <a href="https://github.com/akksj" class="btn btn--ghost" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
+
+    <!-- CHAPTER 00 · INTRO -->
+    <section class="chapter hero" id="intro" data-chapter="intro">
+      <span id="about" class="anchor-alias"></span>
+      <div class="hero__inner">
+        <p class="kicker hero__kicker"><span>Chapter 00</span> Intro</p>
+        <p class="hero__hi">Hi, I'm</p>
+        <h1 class="hero__name" id="hero-name">Sarthak Giri</h1>
+        <p class="hero__role"><span>Full Stack Developer</span><i></i><span>MERN</span><i></i><span>PHP / MySQL</span></p>
+        <p class="hero__intro">
+          I build web apps for places that still run on paper: a neighbourhood clinic's walk-in queue,
+          a kirana shop's udhaar (credit) book, a college timetable. My main stack is MERN
+          (MongoDB, Express, React, Node), and I started out with PHP and MySQL. I also run
+          <a href="../">SwitchKit India</a>, a live job-switch kit with a free CTC calculator.
+        </p>
+        <div class="hero__cta">
+          <a href="#problem" class="btn btn--glow" data-magnetic>Begin the story</a>
+          <a href="https://github.com/akksj" class="btn btn--ghost" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
         </div>
-        <div class="hero__card reveal" aria-hidden="true">
-          <div class="code">
-            <div class="code__bar"><i></i><i></i><i></i><span>sarthak.js</span></div>
-<pre><code><span class="k">const</span> sarthak = {
-  role: <span class="s">'Full Stack Developer'</span>,
-  stack: [<span class="s">'MongoDB'</span>, <span class="s">'Express'</span>,
-          <span class="s">'React'</span>, <span class="s">'Node'</span>],
-  alsoUsed: [<span class="s">'PHP'</span>, <span class="s">'MySQL'</span>],
-  live: <span class="s">'SwitchKit India'</span>,
-  location: <span class="s">'India'</span>,
-};</code></pre>
-          </div>
+        <p class="hero__note">Based in India · Open to internships and junior full-stack roles.</p>
+      </div>
+      <a href="#problem" class="scrollcue" aria-label="Scroll to chapter 1"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- CHAPTER 01 · THE PROBLEM -->
+    <section class="chapter problem" id="problem" data-chapter="problem">
+      <div class="problem__pin">
+        <div class="problem__head">
+          <p class="kicker"><span>Chapter 01</span> The problem I chase</p>
+          <h2 class="problem__title split-words">Small businesses in India still run on paper.</h2>
+          <p class="problem__lead">Four real problems. Four things I built for them.</p>
+          <div class="problem__counter" aria-hidden="true"><b id="pcount">01</b> / 04</div>
+          <div class="problem__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         </div>
+        <ol class="problem__list">
+          <li class="pcard glass" style="--hue:160">
+            <span class="pcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 6v36M6 24h36" /><rect x="10" y="10" width="28" height="28" rx="8"/></svg>
+            </span>
+            <h3>Clinic queues</h3>
+            <p>A neighbourhood clinic's walk-in queue still runs on paper. Who is next, which slot is free and which doctor is seeing whom all live in someone's head.</p>
+            <p class="pcard__answer"><span>Built →</span> MediQ Clinic: slot booking with a clash check, tokens at reception and a waiting-room board that refreshes itself.</p>
+          </li>
+          <li class="pcard glass" style="--hue:200">
+            <span class="pcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="4"/><path d="M16 16h16M16 24h16M16 32h10"/></svg>
+            </span>
+            <h3>Kirana credit</h3>
+            <p>The udhaar (credit) book at a kirana counter is a paper ledger. Stock, bills and who owes what slowly drift apart.</p>
+            <p class="pcard__answer"><span>Built →</span> Udhaar Khata: stock-checked bills that mix cash and credit, and per-customer balances.</p>
+          </li>
+          <li class="pcard glass" style="--hue:255">
+            <span class="pcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="4"/><path d="M6 18h36M18 8v32M30 8v32"/></svg>
+            </span>
+            <h3>Timetable clashes</h3>
+            <p>A college timetable made by hand can book the same teacher or room twice, and nobody notices until the class starts.</p>
+            <p class="pcard__answer"><span>Built →</span> College Timetable Generator: a class grid that refuses double bookings.</p>
+          </li>
+          <li class="pcard glass" style="--hue:300">
+            <span class="pcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M18 17h12M18 23h12M24 23c6 0 6 9-1 9l8 6"/></svg>
+            </span>
+            <h3>CTC confusion</h3>
+            <p>Developers switching jobs get an offer as a CTC number and can't tell what will actually land in their account each month.</p>
+            <p class="pcard__answer"><span>Built →</span> SwitchKit India: a free CTC to in-hand calculator (FY 2026-27, new regime), live now.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <h2 class="section__title reveal">Skills</h2>
-        <p class="section__lead reveal">Only what's used in my public code.</p>
-        <div class="skills">
-          <div class="skill-group reveal">
-            <h3>Frontend</h3>
-            <ul class="chips">
-              <li>JavaScript (ES modules)</li><li>React 18</li><li>React Router</li><li>Vite</li><li>HTML5</li><li>CSS3</li>
-            </ul>
-          </div>
-          <div class="skill-group reveal">
-            <h3>Backend</h3>
-            <ul class="chips">
-              <li>Node.js</li><li>Express</li><li>REST APIs</li><li>JWT auth</li><li>bcrypt</li><li>Role-based access</li><li>PHP (mysqli)</li>
-            </ul>
-          </div>
-          <div class="skill-group reveal">
-            <h3>Databases</h3>
-            <ul class="chips">
-              <li>MongoDB</li><li>Mongoose</li><li>MySQL</li><li>phpMyAdmin</li>
-            </ul>
-          </div>
-          <div class="skill-group reveal">
-            <h3>Tools &amp; shipping</h3>
-            <ul class="chips">
-              <li>Git</li><li>GitHub</li><li>GitHub Pages</li><li>npm</li><li>XAMPP / WAMP</li><li>SEO basics (sitemap, meta)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- CHAPTER 02 · PROJECTS AS SCENES -->
+    <section class="chapter projects" id="projects" data-chapter="projects">
+      <header class="chapter__intro">
+        <p class="kicker"><span>Chapter 02</span> Projects, scene by scene</p>
+        <h2 class="chapter__title">Real problems, <em>honest status.</em></h2>
+        <p class="chapter__lead">Each README says what works and what doesn't yet.</p>
+      </header>
 
-    <!-- PROJECTS -->
-    <section class="section section--alt" id="projects">
-      <div class="container">
-        <h2 class="section__title reveal">Projects</h2>
-        <p class="section__lead reveal">Real problems, honest status. Each README says what works and what doesn't yet.</p>
-
-        <article class="project project--featured reveal">
-          <div class="project__badge">Featured · Live</div>
-          <div class="project__body">
-            <h3>SwitchKit India</h3>
-            <p>
-              A job-switch kit for Indian developers with 2–6 years of experience: a 30/60/90-day switch plan,
-              resume and LinkedIn guidance, negotiation scripts, notice-period and joining checklists.
-              Includes a <strong>free CTC to in-hand salary calculator</strong> (FY 2026-27, new tax regime) and long-form
-              articles on expected-CTC answers and notice-period buyouts.
-            </p>
-            <ul class="tags"><li>HTML</li><li>CSS</li><li>Vanilla JavaScript</li><li>GitHub Pages</li><li>SEO</li></ul>
-            <div class="project__links">
-              <a class="btn" href="../" target="_blank" rel="noopener">Live site ↗</a>
-              <a class="btn btn--ghost" href="../calculator.html" target="_blank" rel="noopener">CTC calculator ↗</a>
-              <a class="link" href="https://github.com/akksj/akksj.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+      <div class="scenes">
+        <!-- Scene 1: SwitchKit (featured, live) -->
+        <article class="scene" style="--c1:#6ee7b7;--c2:#60a5fa">
+          <div class="scene__bgnum" aria-hidden="true">01</div>
+          <div class="scene__card glass tilt">
+            <div class="scene__glow" aria-hidden="true"></div>
+            <div class="scene__text">
+              <p class="scene__badge"><span class="live-dot"></span> Featured · Live</p>
+              <h3>SwitchKit India</h3>
+              <p>
+                A job-switch kit for Indian developers with 2–6 years of experience: a 30/60/90-day switch plan,
+                resume and LinkedIn guidance, negotiation scripts, notice-period and joining checklists.
+                Includes a <strong>free CTC to in-hand salary calculator</strong> (FY 2026-27, new tax regime) and long-form
+                articles on expected-CTC answers and notice-period buyouts.
+              </p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>Vanilla JavaScript</li><li>GitHub Pages</li><li>SEO</li></ul>
+              <div class="scene__links">
+                <a class="btn btn--glow" href="../" target="_blank" rel="noopener" data-magnetic>Live site ↗</a>
+                <a class="btn btn--ghost" href="../calculator.html" target="_blank" rel="noopener" data-magnetic>CTC calculator ↗</a>
+                <a class="link" href="https://github.com/akksj/akksj.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+            <div class="scene__visual" aria-hidden="true">
+              <div class="mock mock--calc">
+                <div class="mock__bar"><i></i><i></i><i></i><span>calculator.html</span></div>
+                <div class="calc">
+                  <div class="calc__row"><span>Annual CTC</span><b class="calc__field">₹ ______</b></div>
+                  <div class="calc__row"><span>Tax regime</span><b class="calc__pill">New · FY 2026-27</b></div>
+                  <div class="calc__arrow">↓</div>
+                  <div class="calc__row calc__row--out"><span>In-hand / month</span><b class="calc__field calc__field--glow">₹ ______</b></div>
+                </div>
+                <ul class="mock__list"><li>30/60/90-day plan</li><li>Negotiation scripts</li><li>Notice-period guide</li><li>3 long-form articles</li></ul>
+              </div>
             </div>
           </div>
         </article>
 
-        <div class="grid">
-          <article class="card reveal">
-            <h3>MediQ Clinic</h3>
-            <p>
-              A MERN clinic desk for a neighbourhood doctor. Patients book slots with a clash check, reception
-              checks them in and issues the next token, doctors update only their own appointments, and a
-              waiting-room board refreshes every 10 seconds.
-            </p>
-            <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li><li>JWT</li></ul>
-            <p class="status">Runs locally · not deployed yet</p>
-            <div class="card__links"><a class="link" href="https://github.com/akksj/mediq-clinic" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </article>
+        <!-- Scene 2: MediQ -->
+        <article class="scene" style="--c1:#5eead4;--c2:#38bdf8">
+          <div class="scene__bgnum" aria-hidden="true">02</div>
+          <div class="scene__card glass tilt">
+            <div class="scene__glow" aria-hidden="true"></div>
+            <div class="scene__text">
+              <p class="scene__badge">MERN · Clinic desk</p>
+              <h3>MediQ Clinic</h3>
+              <p>
+                A MERN clinic desk for a neighbourhood doctor. Patients book slots with a clash check, reception
+                checks them in and issues the next token, doctors update only their own appointments, and a
+                waiting-room board refreshes every 10 seconds.
+              </p>
+              <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li><li>JWT</li></ul>
+              <p class="status">Runs locally · not deployed yet</p>
+              <div class="scene__links"><a class="link" href="https://github.com/akksj/mediq-clinic" target="_blank" rel="noopener">GitHub ↗</a></div>
+            </div>
+            <div class="scene__visual" aria-hidden="true">
+              <div class="mock mock--board">
+                <div class="mock__bar"><i></i><i></i><i></i><span>waiting-room board</span></div>
+                <div class="board__now"><span>Now serving</span><b>Token</b><em class="board__pulse"></em></div>
+                <div class="board__rows"><i></i><i></i><i></i><i></i></div>
+                <div class="board__refresh"><span class="spin"></span> refreshes every 10 s</div>
+                <ul class="mock__roles"><li>patient</li><li>reception</li><li>doctor</li></ul>
+              </div>
+            </div>
+          </div>
+        </article>
 
-          <article class="card reveal">
-            <h3>Udhaar Khata</h3>
-            <p>
-              A MERN ledger for a kirana counter: a product catalogue with stock and reorder levels, bills that mix
-              cash and credit, and customer udhaar balances. Stock is checked before a bill saves, failed bills
-              put stock back, and a collection can't exceed what the customer owes.
-            </p>
-            <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li><li>JWT</li></ul>
-            <p class="status">Runs locally · not deployed yet</p>
-            <div class="card__links"><a class="link" href="https://github.com/akksj/udhaar-khata" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </article>
+        <!-- Scene 3: Udhaar Khata -->
+        <article class="scene" style="--c1:#60a5fa;--c2:#a78bfa">
+          <div class="scene__bgnum" aria-hidden="true">03</div>
+          <div class="scene__card glass tilt">
+            <div class="scene__glow" aria-hidden="true"></div>
+            <div class="scene__text">
+              <p class="scene__badge">MERN · Kirana ledger</p>
+              <h3>Udhaar Khata</h3>
+              <p>
+                A MERN ledger for a kirana counter: a product catalogue with stock and reorder levels, bills that mix
+                cash and credit, and customer udhaar balances. Stock is checked before a bill saves, failed bills
+                put stock back, and a collection can't exceed what the customer owes.
+              </p>
+              <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li><li>JWT</li></ul>
+              <p class="status">Runs locally · not deployed yet</p>
+              <div class="scene__links"><a class="link" href="https://github.com/akksj/udhaar-khata" target="_blank" rel="noopener">GitHub ↗</a></div>
+            </div>
+            <div class="scene__visual" aria-hidden="true">
+              <div class="mock mock--rules">
+                <div class="mock__bar"><i></i><i></i><i></i><span>rules enforced on the server</span></div>
+                <ul class="rules">
+                  <li><b>✓</b> stock is checked before a bill saves</li>
+                  <li><b>↺</b> a failed bill puts stock back</li>
+                  <li><b>≤</b> a collection can't exceed the balance</li>
+                  <li><b>₹</b> one bill can mix cash and credit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
 
-          <article class="card reveal">
-            <h3>College Timetable Generator</h3>
-            <p>
-              A PHP and MySQL prototype that builds a class grid and makes sure no teacher or room is booked
-              twice. Includes the SQL schema and an admin login, and now uses mysqli instead of the removed
-              mysql_* API.
-            </p>
-            <ul class="tags"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
-            <p class="status">Prototype · MERN rewrite planned</p>
-            <div class="card__links"><a class="link" href="https://github.com/akksj/timetable-generator-php-mysql-" target="_blank" rel="noopener">GitHub ↗</a></div>
-          </article>
-        </div>
+        <!-- Scene 4: Timetable -->
+        <article class="scene" style="--c1:#a78bfa;--c2:#f472b6">
+          <div class="scene__bgnum" aria-hidden="true">04</div>
+          <div class="scene__card glass tilt">
+            <div class="scene__glow" aria-hidden="true"></div>
+            <div class="scene__text">
+              <p class="scene__badge">PHP · MySQL · Prototype</p>
+              <h3>College Timetable Generator</h3>
+              <p>
+                A PHP and MySQL prototype that builds a class grid and makes sure no teacher or room is booked
+                twice. Includes the SQL schema and an admin login, and now uses mysqli instead of the removed
+                mysql_* API.
+              </p>
+              <ul class="tags"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
+              <p class="status">Prototype · MERN rewrite planned</p>
+              <div class="scene__links"><a class="link" href="https://github.com/akksj/timetable-generator-php-mysql-" target="_blank" rel="noopener">GitHub ↗</a></div>
+            </div>
+            <div class="scene__visual" aria-hidden="true">
+              <div class="mock mock--grid">
+                <div class="mock__bar"><i></i><i></i><i></i><span>class grid</span></div>
+                <div class="tgrid">
+                  <i></i><i class="on"></i><i></i><i class="on"></i><i></i>
+                  <i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i>
+                  <i></i><i class="on"></i><i class="clash"></i><i></i><i class="on"></i>
+                  <i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i>
+                </div>
+                <div class="tgrid__note"><span class="x">✕</span> double booking blocked</div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- ACTIVITY -->
-    <section class="section" id="activity">
-      <div class="container">
-        <h2 class="section__title reveal">GitHub activity</h2>
-        <p class="section__lead reveal">A snapshot of <a href="https://github.com/akksj" target="_blank" rel="noopener">@akksj</a>, taken <span id="snapshot-date">16 Oct 2026</span>.</p>
-
-        <div class="stats reveal">
-          <div class="stat"><span class="stat__num" data-count="7">7</span><span class="stat__label">Public repos</span></div>
-          <div class="stat"><span class="stat__num" data-count="27">27</span><span class="stat__label">Commits</span></div>
-          <div class="stat"><span class="stat__num" data-count="4">4</span><span class="stat__label">Featured projects</span></div>
-          <div class="stat"><span class="stat__num" data-count="1">1</span><span class="stat__label">Live product</span></div>
+    <!-- CHAPTER 03 · SKILLS -->
+    <section class="chapter skills" id="skills" data-chapter="skills">
+      <header class="chapter__intro">
+        <p class="kicker"><span>Chapter 03</span> The toolkit</p>
+        <h2 class="chapter__title">Skills in <em>orbit.</em></h2>
+        <p class="chapter__lead">Only what's used in my public code.</p>
+      </header>
+      <div class="orbit" id="orbit">
+        <div class="orbit__core"><span>SG</span><small>MERN core</small></div>
+        <div class="ring ring--1" style="--r:1;--n:6"><h3 class="ring__label">Frontend</h3>
+          <ul class="chips">
+            <li style="--i:0">JavaScript (ES modules)</li><li style="--i:1">React 18</li><li style="--i:2">React Router</li><li style="--i:3">Vite</li><li style="--i:4">HTML5</li><li style="--i:5">CSS3</li>
+          </ul>
         </div>
-
-        <div class="activity">
-          <div class="panel reveal">
-            <h3>Languages in my projects</h3>
-            <p class="muted small">Bytes of code per language across the 4 projects above, measured by GitHub.</p>
-            <div class="langbar" id="langbar" role="img" aria-label="Language breakdown"></div>
-            <ul class="legend" id="legend"></ul>
-          </div>
-          <div class="panel reveal">
-            <h3>Recent milestones</h3>
-            <ol class="timeline">
-              <li><time datetime="2026-10-16">16 Oct 2026</time><span>Launched SwitchKit India on GitHub Pages</span></li>
-              <li><time datetime="2026-10-03">3 Oct 2026</time><span>Fixes across all three apps: mysqli login, bill rollback, udhaar collections, staff-signup lock, live queue board</span></li>
-              <li><time datetime="2026-09-27">27 Sep 2026</time><span>Built MediQ Clinic and Udhaar Khata (MERN)</span></li>
-              <li><time datetime="2026-04-04">4 Apr 2026</time><span>Published the College Timetable Generator (PHP/MySQL)</span></li>
-              <li><time datetime="2023-10-18">18 Oct 2023</time><span>Joined GitHub</span></li>
-            </ol>
-          </div>
+        <div class="ring ring--2" style="--r:2;--n:7"><h3 class="ring__label">Backend</h3>
+          <ul class="chips">
+            <li style="--i:0">Node.js</li><li style="--i:1">Express</li><li style="--i:2">REST APIs</li><li style="--i:3">JWT auth</li><li style="--i:4">bcrypt</li><li style="--i:5">Role-based access</li><li style="--i:6">PHP (mysqli)</li>
+          </ul>
         </div>
+        <div class="ring ring--3" style="--r:3;--n:4"><h3 class="ring__label">Databases</h3>
+          <ul class="chips">
+            <li style="--i:0">MongoDB</li><li style="--i:1">Mongoose</li><li style="--i:2">MySQL</li><li style="--i:3">phpMyAdmin</li>
+          </ul>
+        </div>
+        <div class="ring ring--4" style="--r:4;--n:6"><h3 class="ring__label">Tools &amp; shipping</h3>
+          <ul class="chips">
+            <li style="--i:0">Git</li><li style="--i:1">GitHub</li><li style="--i:2">GitHub Pages</li><li style="--i:3">npm</li><li style="--i:4">XAMPP / WAMP</li><li style="--i:5">SEO basics (sitemap, meta)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="langs glass">
+        <h3>Languages in my projects</h3>
+        <p class="muted small">Bytes of code per language across the 4 projects above, measured by GitHub.</p>
+        <div class="langbar" id="langbar" role="img" aria-label="Language breakdown"></div>
+        <ul class="legend" id="legend"></ul>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section section--alt" id="contact">
-      <div class="container contact reveal">
-        <h2 class="section__title">Let's talk</h2>
-        <p class="section__lead">Hiring for an internship or a junior full-stack role, or need a clinic, shop or campus tool on the web? Reach out.</p>
+    <!-- CHAPTER 04 · JOURNEY -->
+    <section class="chapter journey" id="journey" data-chapter="journey">
+      <span id="activity" class="anchor-alias"></span>
+      <header class="chapter__intro">
+        <p class="kicker"><span>Chapter 04</span> The journey so far</p>
+        <h2 class="chapter__title">From first repo to <em>first launch.</em></h2>
+        <p class="chapter__lead">A snapshot of <a href="https://github.com/akksj" target="_blank" rel="noopener">@akksj</a>, taken <span id="snapshot-date">16 Oct 2026</span>.</p>
+      </header>
+
+      <div class="timeline" id="timeline">
+        <svg class="timeline__svg" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="tl-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6ee7b7"/><stop offset=".5" stop-color="#60a5fa"/><stop offset="1" stop-color="#f472b6"/>
+            </linearGradient>
+          </defs>
+          <path class="timeline__track" d="M50 0 C 80 100, 20 200, 50 300 S 80 500, 50 600 S 20 800, 50 1000"/>
+          <path class="timeline__draw" id="tl-path" d="M50 0 C 80 100, 20 200, 50 300 S 80 500, 50 600 S 20 800, 50 1000"/>
+        </svg>
+        <ol class="timeline__list">
+          <li class="ms"><div class="ms__card glass"><time datetime="2023-10-18">18 Oct 2023</time><h3>Joined GitHub</h3><p>Created the @akksj account.</p></div></li>
+          <li class="ms"><div class="ms__card glass"><time datetime="2026-04-04">4 Apr 2026</time><h3>First full-stack project</h3><p>Published the College Timetable Generator (PHP/MySQL).</p></div></li>
+          <li class="ms"><div class="ms__card glass"><time datetime="2026-09-27">27 Sep 2026</time><h3>Moved to MERN</h3><p>Built MediQ Clinic and Udhaar Khata (MERN).</p></div></li>
+          <li class="ms"><div class="ms__card glass"><time datetime="2026-10-03">3 Oct 2026</time><h3>Hardening</h3><p>Fixes across all three apps: mysqli login, bill rollback, udhaar collections, staff-signup lock, live queue board.</p></div></li>
+          <li class="ms ms--hot"><div class="ms__card glass"><time datetime="2026-10-16">16 Oct 2026</time><h3>First launch</h3><p>Launched SwitchKit India on GitHub Pages.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="stats">
+        <div class="stat glass"><span class="stat__num" data-count="7">7</span><span class="stat__label">Public repos</span></div>
+        <div class="stat glass"><span class="stat__num" data-count="27">27</span><span class="stat__label">Commits</span></div>
+        <div class="stat glass"><span class="stat__num" data-count="4">4</span><span class="stat__label">Featured projects</span></div>
+        <div class="stat glass"><span class="stat__num" data-count="1">1</span><span class="stat__label">Live product</span></div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 05 · CONTACT -->
+    <section class="chapter contact" id="contact" data-chapter="contact">
+      <div class="contact__inner">
+        <p class="kicker"><span>Chapter 05</span> The next chapter</p>
+        <h2 class="contact__title">Let's <span class="glowtext">talk.</span></h2>
+        <p class="contact__lead">Hiring for an internship or a junior full-stack role, or need a clinic, shop or campus tool on the web? Reach out.</p>
         <div class="contact__links">
-          <a class="btn" href="https://github.com/akksj" target="_blank" rel="noopener">GitHub · @akksj ↗</a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/sarthak-giri-117490296" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn--glow btn--xl" href="https://www.linkedin.com/in/sarthak-giri-117490296" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+          <a class="btn btn--ghost btn--xl" href="https://github.com/akksj" target="_blank" rel="noopener" data-magnetic>GitHub · @akksj ↗</a>
           <!-- PLACEHOLDER: Email. Hidden until an address is confirmed. To show it, set href="mailto:you@example.com" and remove "hidden". -->
-          <a class="btn btn--ghost" href="#" data-placeholder="email" hidden>Email</a>
+          <a class="btn btn--ghost btn--xl" href="#" data-placeholder="email" hidden>Email</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year">2026</span> Sarthak Giri · Built with plain HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
-      <a href="#top" class="link">Back to top ↑</a>
+    <div class="footer__inner">
+      <p>© <span id="year">2026</span> Sarthak Giri · Hand-built with HTML, CSS &amp; JS, GSAP and Lenis · Hosted on GitHub Pages</p>
+      <a href="#intro" class="link">Back to top ↑</a>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" integrity="sha384-P8VzCVnT9NBUkMrpcIZrJbA7EBjJvh/fJS6PmP+4nLIM284DtsImIv8D0fFjIkeh" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" integrity="sha384-R18XzqnxvVLEF+BYfhpmDx30v7eP83fAckyfoRzK7/Uf6nGqufcmsk0eAKo7S3RU" crossorigin="anonymous" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
